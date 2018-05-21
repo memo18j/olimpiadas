@@ -19,17 +19,26 @@ public class Grupo implements Serializable {
 
 	private String letra;
 
-	//bi-directional many-to-one association to Deporte
-	@ManyToOne
-	@JoinColumn(name="iddeporte")
-	private Deporte deporte;
-
 	//bi-directional many-to-one association to Delegacion
 	@ManyToOne
 	@JoinColumn(name="iddelegacion")
 	private Delegacion delegacion;
 
+	//bi-directional many-to-one association to Deporte
+	@ManyToOne
+	@JoinColumn(name="iddeporte")
+	private Deporte deporte;
+
 	public Grupo() {
+	}
+	public Grupo(String letra){
+		super();
+		this.letra = letra;
+	}
+	public Grupo(int id,String letra){
+		super();
+		this.id = id;
+		this.letra = letra;
 	}
 
 	public int getId() {
@@ -48,20 +57,20 @@ public class Grupo implements Serializable {
 		this.letra = letra;
 	}
 
-	public Deporte getDeporte() {
-		return this.deporte;
-	}
-
-	public void setDeporte(Deporte deporte) {
-		this.deporte = deporte;
-	}
-
 	public Delegacion getDelegacion() {
 		return this.delegacion;
 	}
 
 	public void setDelegacion(Delegacion delegacion) {
 		this.delegacion = delegacion;
+	}
+
+	public Deporte getDeporte() {
+		return this.deporte;
+	}
+
+	public void setDeporte(Deporte deporte) {
+		this.deporte = deporte;
 	}
 
 }

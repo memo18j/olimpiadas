@@ -31,6 +31,16 @@ public class Delegacion implements Serializable {
 
 	public Delegacion() {
 	}
+	
+	public Delegacion(String nombre) {
+		super();
+		this.descripcion = nombre;
+	}
+	public Delegacion(int id,String nombre) {
+		super();
+		this.id = id;
+		this.descripcion = nombre;
+	}
 
 	public int getId() {
 		return this.id;

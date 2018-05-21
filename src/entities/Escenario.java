@@ -26,13 +26,12 @@ public class Escenario implements Serializable {
 
 	public Escenario() {
 	}
-	
-	public Escenario(String nombre){
+	public Escenario(String nombre) {
 		super();
 		this.nombre = nombre;
+		
 	}
-	
-	public Escenario(int id,String nombre){
+	public Escenario(int id,String nombre) {
 		super();
 		this.id = id;
 		this.nombre = nombre;

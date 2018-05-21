@@ -37,6 +37,13 @@ public class Funcionario implements Serializable {
 
 	public Funcionario() {
 	}
+	public Funcionario(String apellido,int delegado,String nombre,String telefono){
+		super();
+		this.apellido = apellido;
+		this.nombre = nombre;
+		this.delegado = delegado;
+		this.telefono = telefono;
+	}
 
 	public int getId() {
 		return this.id;
