@@ -18,13 +18,24 @@ public class Escenario implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 
-	private int nombre;
+	private String nombre;
 
 	//bi-directional many-to-one association to Planilla
 	@OneToMany(mappedBy="escenario")
 	private List<Planilla> planillas;
 
 	public Escenario() {
+	}
+	
+	public Escenario(String nombre){
+		super();
+		this.nombre = nombre;
+	}
+	
+	public Escenario(int id,String nombre){
+		super();
+		this.id = id;
+		this.nombre = nombre;
 	}
 
 	public int getId() {
@@ -35,11 +46,11 @@ public class Escenario implements Serializable {
 		this.id = id;
 	}
 
-	public int getNombre() {
+	public String getNombre() {
 		return this.nombre;
 	}
 
-	public void setNombre(int nombre) {
+	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 

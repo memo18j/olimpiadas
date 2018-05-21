@@ -26,6 +26,16 @@ public class Deporte implements Serializable {
 
 	public Deporte() {
 	}
+	public Deporte(String nombre){
+		super();
+		this.nombre = nombre;
+	}
+	public Deporte(int id,String nombre){
+		super();
+		this.id = id;
+		this.nombre = nombre;
+	}
+	
 
 	public int getId() {
 		return this.id;
